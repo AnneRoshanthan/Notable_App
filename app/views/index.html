@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  <link rel="stylesheet" href="styles.css">
+  <title>Notes CRUD Client</title>
+
+  <script src="app/public/js/jquery-3.2.1.js"></script>
+
+  <style>
+    input[type='submit'], button, [aria-label]{
+      cursor: pointer;
+    }
+    #spoiler{
+      display: none;
+    }
+    body{
+            
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+            text-align: center;
+        }
+        input{
+            background-color: lightblue;
+            padding: 5px;
+            box-shadow: 0px 0px 5px 0px #000;
+        }
+        table{
+            width: 90%;
+        }   
+        tr{
+            color: red;
+        }
+        
+  </style>
+
+</head>
+<body>
+
+<form action="javascript:void(0);" method="POST" onsubmit="addNote()">
+  <input type="text" id="add-title" placeholder="New Note Title"><br><br>
+  <input type="text" id="add-body" placeholder="New Note Body"><br><br>
+  <input type="submit" value="Add">
+</form>
+<hr>
+<div id="spoiler" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
+    <input type="text" id="edit-title">
+    <input type="text" id="edit-body">
+    <input type="submit" value="Edit">
+  </form>
+</div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+    <tbody id="notes">
+    </tbody>
+</table>
+
+<!-- <script src="app/public/js/script1.js"></script> -->
+<script src="app/public/js/script2.js"></script>
+<!-- <script src="app/public/js/script3.js"></script> -->
+</body>
+</html>
