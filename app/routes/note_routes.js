@@ -5,6 +5,7 @@ module.exports =  function(app,db){
     app.get('/', function(req,res){
         res.sendfile('app/views/index.html')
     });
+    
 
     app.get('/notes/:id', (req,res) =>{
         const id = req.params.id;
