@@ -13,6 +13,7 @@
       color: red;
       background-color: lightblue;
       border-radius: 8px;
+      
     }
     #spoiler{
       display: none;
@@ -49,7 +50,7 @@
         .bold{
             color: steelblue;
         }
-        .save{
+        .save .savee{
             color: green;
             background-color: lightblue;
             border-radius: 8px;
@@ -105,34 +106,42 @@
 
 
 <div id="back">
-
+<div id="se1">
 <form action="javascript:void(0);" method="POST" onsubmit="addNote()">
      <b class="bold"> First Name:-</b>  <input class="name" type="text" id="add-title" placeholder="Your First Name"><br><br>
      <b class="bold"> Last Name:- </b>  <input class="name" type="text" id="add-body" placeholder="Your Last Name"><br><br>
   <input class="save" type="submit" value="Save">
 </form>
 <hr>
+</div>
+
+<div id="se2">
 <h3> <span> Get Edit</span> and <span>Delete</span> your name blow here </h3>
 <hr>
 <div id="spoiler" role="aria-hidden">
   <form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
     <b class="bold">Edite your First Name:-</b> <input class="tex name" type="text" id="edit-title" placeholder="Edit Your First Name"><br><br>
     <b class="bold">Edite your Last Name:-</b> <input class="tex name" type="text" id="edit-body" placeholder=" Edit Your First Name"><br><br>
-    <input class="save" type="submit" value="Edit">
+    <input class="savee" type="submit" id="se3" value="Edit">
   </form>
 </div>
 
+
+
 <table>
   <tr>
-    <th>ID</th>
+    <th>Id</th>
     <th>FirstName</th>
     <th>LastName</th>
   </tr>
-    <tbody id="notes">
-    </tbody>
-</table>
+    <tbody id="notes"><br><br>
+        
+</table><br><br><br><br>
+<button id="home">Home</button>
 </div>
 
+
+</div>
 <footer>	
 			<h3>Copyright &copy; 2021-Anne Roshanthan </h3>		
 </footer>
@@ -140,6 +149,32 @@
 </div>
 <!-- <script src="app/public/js/script1.js"></script> -->
 <script src="app/public/js/script2.js"></script>
+<script>
+
+window.onload = function(){
+        $("#se2").hide()
+     
+}
+
+ $(document).ready(function(){
+  
+
+
+        $(".save").click(function(){
+            $("#se1").hide(3000);
+            $("#se2").show(3000);
+        });
+        
+        $("#home").click(function(){
+            $("#se2").hide(3000);
+            $("#se1").show(3000);
+        });
+
+
+              });
+
+
+</script>
 <!-- <script src="app/public/js/script3.js"></script> -->
 </body>
 </html>
