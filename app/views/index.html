@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,7 @@
       color: red;
       background-color: lightblue;
       border-radius: 8px;
+      
     }
     #spoiler{
       display: none;
@@ -24,7 +26,7 @@
             
         }
         #back{
-            background-color: lightgray;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/51/338/359/red-4k-love-image-heart-wallpaper-preview.jpg");
             padding: 20px; 
             
             height: 100%;
@@ -49,7 +51,7 @@
         .bold{
             color: steelblue;
         }
-        .save{
+        .save .savee{
             color: green;
             background-color: lightblue;
             border-radius: 8px;
@@ -68,7 +70,7 @@
             color: rebeccapurple;
         }
         footer{
-           
+            background-image: url("https://wallpaperaccess.com/full/300942.jpg");
             padding-top: 5%;
      }
      tr{
@@ -92,12 +94,9 @@
             </li>
           
           
-            <!-- <li class="nav-item ">
-              <a class="nav-link " href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg></a>
-            </li> -->
-           
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://ukilifexercise.blogspot.com/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://anneroshanthan.github.io/">Github</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.linkedin.com/in/anne-roshanthan-05113a210/">Linked IN</a></li>
             
           </ul>
         </div>
@@ -105,41 +104,79 @@
 
 
 <div id="back">
-
+<div id="se1">
 <form action="javascript:void(0);" method="POST" onsubmit="addNote()">
      <b class="bold"> First Name:-</b>  <input class="name" type="text" id="add-title" placeholder="Your First Name"><br><br>
      <b class="bold"> Last Name:- </b>  <input class="name" type="text" id="add-body" placeholder="Your Last Name"><br><br>
   <input class="save" type="submit" value="Save">
 </form>
 <hr>
+</div>
+
+<div id="se2">
 <h3> <span> Get Edit</span> and <span>Delete</span> your name blow here </h3>
 <hr>
 <div id="spoiler" role="aria-hidden">
   <form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
     <b class="bold">Edite your First Name:-</b> <input class="tex name" type="text" id="edit-title" placeholder="Edit Your First Name"><br><br>
     <b class="bold">Edite your Last Name:-</b> <input class="tex name" type="text" id="edit-body" placeholder=" Edit Your First Name"><br><br>
-    <input class="save" type="submit" value="Edit">
+    <input class="savee" type="submit" id="se3" value="Edit">
   </form>
 </div>
 
+
+
 <table>
   <tr>
-    <th>ID</th>
+    <th>Id</th>
     <th>FirstName</th>
     <th>LastName</th>
   </tr>
-    <tbody id="notes">
-    </tbody>
-</table>
+    <tbody id="notes"><br><br>
+        
+</table><br><br><br><br>
+<button id="home">Home</button>
 </div>
 
-<footer>	
-			<h3>Copyright &copy; 2021-Anne Roshanthan </h3>		
+
+</div>
+<section class="page-section bg-dark text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Love  Music ? Got to Sound Cloud music</h2>
+        <a class="btn btn-light btn-xl" href="https://anneroshanthan.github.io/Soundcloudmusic/">GO</a>
+    </div>
+</section>
+<footer class="bg-light py-5">
+    <div class="container"><div class="small text-center text-muted">&copy; 2021 All Rights Reserved. <h2>Designed by: Anne Roshanthan</h2> </div></div>
 </footer>
 
 </div>
 <!-- <script src="app/public/js/script1.js"></script> -->
 <script src="app/public/js/script2.js"></script>
+<script>
+
+window.onload = function(){
+        $("#se2").hide()
+     
+}
+
+ $(document).ready(function(){
+  
+
+
+        $(".save").click(function(){
+            $("#se1").hide(3000);
+            $("#se2").show(3000);
+        });
+        
+        $("#home").click(function(){
+            $("#se2").hide(3000);
+            $("#se1").show(3000);
+        });
+
+
+              });
+</script>
 <!-- <script src="app/public/js/script3.js"></script> -->
 </body>
 </html>
